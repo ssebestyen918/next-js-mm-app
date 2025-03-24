@@ -3,9 +3,8 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import Image from "next/image";
+import MenuDrawer from './MenuDrawer';
 
 
 export default function ButtonAppBar() {
@@ -13,25 +12,17 @@ export default function ButtonAppBar() {
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-            <MenuIcon></MenuIcon>
-            </IconButton>
+            <MenuDrawer></MenuDrawer>
    
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               Rejects
             </Typography>
             <div>
             <Image
-                src="/march_madness.jpeg"
+                src="/march_madness.png"
                 alt="marchMadness"
-                height={64}
-                width={90}
+                height={50}
+                width={80}
                 priority
             />  
             </div>
